@@ -15,7 +15,7 @@ export const signup = async (req, res) => {
         }
 
         // finding user with existing username
-        const user = await User.findOne({ username });
+        const user = await User.findOne({ username }).exec();
 
         if (user) {
             return res.status(400).json({ error: "Username already exists"});
@@ -66,7 +66,7 @@ export const login = async (req, res) => {
     try {
 
         const { username, password } = req.body;
-        const user = await User.findOne({username});
+        const user = await User.findOne({username}).exec();
         const isPasswordCorrect = await bcrypt.compare(password, user?.password || "");
 
         console.log(user.username);
