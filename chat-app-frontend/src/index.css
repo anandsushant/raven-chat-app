@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-	background: linear-gradient(rgba(140, 0, 240, 0.2),rgba(255, 255, 255, 0.2));
+	background: linear-gradient(rgba(2, 103, 12, 0.805),rgba(101, 172, 101, 0.723));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;

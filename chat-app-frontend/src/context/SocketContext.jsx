@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("https://raven-chat-app.onrender.com", {
+			const socket = io("https://raven-app.netlify.com", {
 				query: {
 					userId: authUser._id,
 				},
